@@ -14,6 +14,8 @@ function Template5Login() {
           <h3 className="fba-quant">FBA Quant</h3>
         </div>
       </section>
+
+      
       <div className="checkbox-frame">
       <StartTrialButton />
       </div>

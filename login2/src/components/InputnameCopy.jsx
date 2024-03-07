@@ -1,35 +1,33 @@
-import { useMemo } from "react";
+import { useState } from "react";
 import "./InputnameCopy.css";
 
 const InputnameCopy = ({
     eMAILADRRESS,
     johnDoeExampleComPlacehol,
-    propBorder,
-    propPadding,
-    propBorder1, 
 }) =>{
-    const inputnameCopy2Style = useMemo(() =>  {
-        return {
-          border: propBorder,
-          padding: propPadding,
-        };
-      }, [propBorder, propPadding]);
+    const [isInputFocused, setIsInputFocused] = useState(false);
 
-    const rectangleStyle = useMemo(() => {
-        return {
-          border: propBorder1,
-        };
-      }, [propBorder1]);
+    
+    const handleInputFocus = () => {
+        setIsInputFocused(true);
+    };
 
+    const handleInputBlur = () => {
+        setIsInputFocused(false);
+    };
+
+   
 
     return(
-        <div className="inputname-copy-2" style={inputnameCopy2Style}>
-            <div className="rectangle" style={rectangleStyle} />
+        <div className={`inputname-copy-2 ${isInputFocused ? 'highlighted' : ''}`} >
+            
             <div className="email-adrress">{eMAILADRRESS}</div>
             <input
                 className="john-doe-example-com"
                 placeholder={johnDoeExampleComPlacehol}
                 type="text"
+                onFocus={handleInputFocus}
+                onBlur={handleInputBlur}
             />
         </div>
     )

@@ -18,9 +18,9 @@ function StartTrialButton() {
         <InputnameCopy
           eMAILADRRESS="PASSWORD"
           johnDoeExampleComPlacehol="**********"
-          propBorder="1px solid var(--color-gainsboro)"
-          propPadding="var(--padding-xs) var(--padding-14xl) var(--padding-3xs) var(--padding-mid)"
-          propBorder1="1px solid var(--color-gainsboro)"
+ 
+
+          
         />
       </div>
 

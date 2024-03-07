@@ -28,6 +28,7 @@ body {
   --color-dimgray-100: #616161;
   --color-dimgray-200: #545454;
   --color-gainsboro: #e0e0e0;
+  --color-red: red;
 
   /* Gaps */
   --gap-mid: 17px;
