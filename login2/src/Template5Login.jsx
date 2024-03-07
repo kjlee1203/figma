@@ -1,3 +1,4 @@
+import logoImg from "./assets/fba_logo.png";
 import StartTrialButton from  "./components/StartTrialButton.jsx";
 import './Template5Login.css'
 
@@ -7,7 +8,7 @@ function Template5Login() {
       <section className="rectangle-parent">
         <img className="rectangle-icon" alt="rectangle.svg" src="/rectangle.svg" />
         <div className="logo">
-          <img className="logo-icon" loading="lazy" alt="logo.svg" src="/logo.svg" />
+          <img className="logo-icon" loading="lazy" alt="logo.svg" src={logoImg} />
           <h3 className="fba-quant">FBA Quant</h3>
         </div>
       </section>
