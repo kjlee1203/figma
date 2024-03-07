@@ -12,13 +12,18 @@ function StartTrialButton() {
         setInputValue1(event.target.value);
       };
 
+  const [inputValue2, setInputValue2] = useState('');
+  const handleInputValue2 = (event) => {
+        setInputValue2(event.target.value);
+      };
+
   // for storing the user input when the button is clicked
   const [submittedData1, setSubmittedData1] = useState('')
-  //const [submittedData2, setSubmittedData2] = useState('')
+  const [submittedData2, setSubmittedData2] = useState('')
   const handleSubmit = () => {
     setSubmittedData1(inputValue1);
-    //setSubmittedData2(inputValue2);
-    alert('email: '+ inputValue1);
+    setSubmittedData2(inputValue2);
+    alert('email: '+ inputValue1 + '\n password: ' + inputValue2);
   };
 
 
@@ -44,6 +49,8 @@ function StartTrialButton() {
           eMAILADRRESS="PASSWORD"
           johnDoeExampleComPlacehol="**********"
           type = "password"
+          value={inputValue2}
+          onChange={handleInputValue2}
         />
       </div>
 
