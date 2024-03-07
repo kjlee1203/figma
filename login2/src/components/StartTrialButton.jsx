@@ -6,6 +6,22 @@ function StartTrialButton() {
   // useState for checkbox. Default value is true.
   const [checkboxChecked, setCheckboxChecked] = useState(true);
 
+  // useState for recognizing the user input
+  const [inputValue1, setInputValue1] = useState('');
+  const handleInputValue1 = (event) => {
+        setInputValue1(event.target.value);
+      };
+
+  // for storing the user input when the button is clicked
+  const [submittedData1, setSubmittedData1] = useState('')
+  //const [submittedData2, setSubmittedData2] = useState('')
+  const handleSubmit = () => {
+    setSubmittedData1(inputValue1);
+    //setSubmittedData2(inputValue2);
+    alert('email: '+ inputValue1);
+  };
+
+
   return (
     <form className="start-trial-button">
 
@@ -19,6 +35,8 @@ function StartTrialButton() {
           eMAILADRRESS="EMAIL ADRRESS"
           johnDoeExampleComPlacehol="johndoe@example.com"
           type = "text"
+          value={inputValue1}
+          onChange={handleInputValue1}
         />
         
         {/* set type=password to hide the input */}
@@ -44,7 +62,7 @@ function StartTrialButton() {
       
         
       {/* proceed button */}
-      <button className="btn-prytemplate-2">
+      <button className="btn-prytemplate-2" onClick={handleSubmit}>
         <div className="btn-prytemplate-2-child" />
         <div className="proceed-button">PROCEED</div>
       </button>

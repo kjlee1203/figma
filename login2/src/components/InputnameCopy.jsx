@@ -4,7 +4,7 @@ import "./InputnameCopy.css";
 const InputnameCopy = ({
     eMAILADRRESS,
     johnDoeExampleComPlacehol,
-    type
+    type, onChange, value
 }) =>{
     // useState for highlighting the input box
     const [isInputFocused, setIsInputFocused] = useState(false);
@@ -32,6 +32,8 @@ const InputnameCopy = ({
                 type={type}
                 onFocus={handleInputFocus}
                 onBlur={handleInputBlur}
+                value={value}
+                onChange={onChange}
             />
         </div>
     )
