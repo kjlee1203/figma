@@ -1,17 +1,17 @@
 .already-a-member,
-.start-your-14-day {
+.login-title {
   align-self: stretch;
   position: relative;
   font-family: var(--font-zen-kaku-gothic-antique);
   text-align: center;
 }
-.start-your-14-day {
+.login-title {
   font-size: var(--font-size-12xl-3);
   letter-spacing: -0.5px;
   line-height: 37.5px;
   color: var(--color-gray-200);
 }
-.already-a-member {
+.quick-and-simple {
   font-size: var(--font-size-smi-8);
   color: var(--color-gray-100);
 }
@@ -62,7 +62,7 @@
   display: none;
   max-width: 100%;
 }
-.create-an-account {
+.proceed-button {
   position: relative;
   font-size: var(--font-size-base);
   line-height: 28.16px;
@@ -114,13 +114,13 @@
   max-width: 100%;
 }
 @media screen and (max-width: 750px) {
-  .start-your-14-day {
+  .login-title {
     font-size: var(--font-size-6xl);
     line-height: 30px;
   }
 }
 @media screen and (max-width: 450px) {
-  .start-your-14-day {
+  .login-title {
     font-size: var(--font-size-lgi);
     line-height: 22px;
   }

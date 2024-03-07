@@ -6,8 +6,11 @@ import './Template5Login.css'
 function Template5Login() {
   return (
     <div className="template-5login">
-      <section className="rectangle-parent">
-        <img className="rectangle-icon" alt="rectangle.svg" src={bgImg} />
+      
+      {/*This section is for the logo and the background*/}
+      <section className="logo-and-bg">
+        
+        <img className="background-image" alt="bg.png" src={bgImg} />
 
         <div className="logo">
           <img className="logo-icon" loading="lazy" alt="logo.svg" src={logoImg} />
@@ -15,9 +18,9 @@ function Template5Login() {
         </div>
       </section>
 
-      
+      {/*login form*/}
       <div className="checkbox-frame">
-      <StartTrialButton />
+        <StartTrialButton />
       </div>
     </div>
   )
