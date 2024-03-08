@@ -7,6 +7,7 @@ function StartTrialButton() {
   const [checkboxChecked, setCheckboxChecked] = useState(true);
 
   // useState for recognizing the user input
+  // 1, 2, 3 for the first name, email, and password
   const [inputValue1, setInputValue1] = useState('');
   const handleInputValue1 = (event) => {
         setInputValue1(event.target.value);
@@ -17,13 +18,21 @@ function StartTrialButton() {
         setInputValue2(event.target.value);
       };
 
+  const [inputValue3, setInputValue3] = useState('');
+  const handleInputValue3 = (event) => {
+        setInputValue3(event.target.value);
+      };
+
   // for storing the user input when the button is clicked
   const [submittedData1, setSubmittedData1] = useState('')
   const [submittedData2, setSubmittedData2] = useState('')
+  const [submittedData3, setSubmittedData3] = useState('')
   const handleSubmit = () => {
     setSubmittedData1(inputValue1);
     setSubmittedData2(inputValue2);
-    alert('email: '+ inputValue1 + '\n password: ' + inputValue2);
+    setSubmittedData3(inputValue3);
+    alert(' first name: '+ inputValue1 + '\n email: ' + inputValue2
+         + '\n password: ' + inputValue3);
   };
 
 
@@ -47,8 +56,8 @@ function StartTrialButton() {
           eMAILADRRESS="EMAIL ADRRESS"
           johnDoeExampleComPlacehol="johndoe@example.com"
           type = "text"
-          value={inputValue1}
-          onChange={handleInputValue1}
+          value={inputValue2}
+          onChange={handleInputValue2}
         />
         
         {/* set type=password to hide the input */}
@@ -56,8 +65,8 @@ function StartTrialButton() {
           eMAILADRRESS="PASSWORD"
           johnDoeExampleComPlacehol="**********"
           type = "password"
-          value={inputValue2}
-          onChange={handleInputValue2}
+          value={inputValue3}
+          onChange={handleInputValue3}
         />
       </div>
 
