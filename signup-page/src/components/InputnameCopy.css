@@ -1,0 +1,76 @@
+.rectangle {
+    width: 381px;
+    height: 69px;
+    position: relative;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    box-sizing: border-box;
+    display: none;
+    max-width: 100%;
+  }
+  .email-adrress {
+    position: relative;
+    line-height: 18.06px;
+    font-weight: 500;
+    z-index: 1;
+  }
+  .inputname-copy-2,
+  .john-doe-example-com {
+    align-self: stretch;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-family: var(--font-zen-kaku-gothic-antique);
+  }
+  .john-doe-example-com {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    height: 30px;
+    flex-direction: row;
+    padding: 0;
+    font-size: var(--font-size-base);
+    color: var(--color-gray-100);
+    min-width: 198px;
+  }
+  
+
+
+  .inputname-copy-2    {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gainsboro);
+    flex-direction: column;
+    padding: var(--padding-xs) var(--padding-14xl) var(--padding-6xs) var(--padding-mid);
+    max-width: 100%;
+    text-align: left;
+    font-size: var(--font-size-2xs-3);
+    color: var(--color-dimgray-100);
+  }
+
+  .highlighted    {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    flex-direction: column;
+    padding: var(--padding-xs) var(--padding-14xl) var(--padding-6xs) var(--padding-mid);
+    max-width: 100%;
+    text-align: left;
+    font-size: var(--font-size-2xs-3);
+    color: var(--color-dimgray-100);
+  }
+
+
+  /*
+  .inputname-copy-2   {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-red);
+    flex-direction: column;
+    padding: var(--padding-xs) var(--padding-14xl) var(--padding-6xs)
+      var(--padding-mid);
+    max-width: 100%;
+    text-align: left;
+    font-size: var(--font-size-2xs-3);
+    color: var(--color-dimgray-100);
+  }
+  */
