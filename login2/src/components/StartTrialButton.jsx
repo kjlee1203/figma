@@ -24,7 +24,7 @@ function StartTrialButton() {
   const handleSubmit = () => {
     setSubmittedData1(inputValue1);
     setSubmittedData2(inputValue2);
-    alert('email: '+ inputValue1 + '\n password: ' + inputValue2);
+    alert(' email: '+ inputValue1 + '\n password: ' + inputValue2);
   };
 
 
@@ -77,6 +77,7 @@ function StartTrialButton() {
 
       <div className="or-use">OR</div>
       <Link className="terms1" to="/signup">No account yet? Register now</Link>
+      <Link  to="/dashboard">Dashboard</Link>
     </form>
   )
 }
