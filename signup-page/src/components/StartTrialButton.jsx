@@ -1,6 +1,7 @@
 import { useState } from "react";
 import InputnameCopy from "./InputnameCopy";
 import "./StartTrialButton.css";
+import { Link } from 'react-router-dom';
 
 function StartTrialButton() {
   // useState for checkbox. Default value is true.
@@ -96,6 +97,7 @@ function StartTrialButton() {
       <a className="terms1" href="https://www.fbaquant.com/">
         Already a Member? Log in Now
       </a>
+      <Link to="/login">Already have an account? Log in</Link>
     </form>
   )
 }
