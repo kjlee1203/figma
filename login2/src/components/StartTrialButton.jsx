@@ -1,6 +1,7 @@
 import { useState } from "react";
 import InputnameCopy from "./InputnameCopy";
 import "./StartTrialButton.css";
+import { Link } from 'react-router-dom';
 
 function StartTrialButton() {
   // useState for checkbox. Default value is true.
@@ -75,7 +76,7 @@ function StartTrialButton() {
       </button>
 
       <div className="or-use">OR</div>
-      <a className="terms1" href="https://www.fbaquant.com/">No account yet? Register now</a>
+      <Link className="terms1" to="/signup">No account yet? Register now</Link>
     </form>
   )
 }

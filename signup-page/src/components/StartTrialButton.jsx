@@ -94,10 +94,8 @@ function StartTrialButton() {
       </button>
 
       <div className="or-use">OR</div>
-      <a className="terms1" href="https://www.fbaquant.com/">
-        Already a Member? Log in Now
-      </a>
-      <Link to="/login">Already have an account? Log in</Link>
+
+      <Link className="terms1" to="/">Already a Member? Log in Now</Link>
     </form>
   )
 }
