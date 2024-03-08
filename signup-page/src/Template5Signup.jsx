@@ -2,6 +2,7 @@ import logoImg from "./assets/fba_logo.png";
 import bgImg from "./assets/bg.png";
 import StartTrialButton from  "./components/StartTrialButton.jsx";
 import './Template5Signup.css'
+import { Link } from 'react-router-dom';
 
 function Template5Signup() {
   return (
