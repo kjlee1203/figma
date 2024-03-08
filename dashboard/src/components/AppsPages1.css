@@ -1,0 +1,204 @@
+.smart-home-icon {
+  height: 22px;
+  width: 22px;
+  position: relative;
+  min-height: 22px;
+}
+.dashboard1 {
+  flex: 1;
+  position: relative;
+  line-height: 22px;
+}
+.badge1,
+.div1 {
+  align-self: stretch;
+}
+.div1 {
+  width: 9px;
+  position: relative;
+  line-height: 14px;
+  font-weight: 600;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.badge1 {
+  width: 22px;
+  border-radius: var(--br-xl);
+  background-color: var(--light-opacity-color-primary-primary-16);
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-9xs) var(--padding-7xs);
+  box-sizing: border-box;
+  text-align: center;
+  font-size: var(--light-basic-typography-paragraph-small-semi-bold-size);
+  color: var(--light-solid-color-primary-primary-500-base);
+}
+.chevron-down-icon {
+  height: 18px;
+  width: 18px;
+  position: relative;
+  display: none;
+}
+.list1 {
+  align-self: stretch;
+  border-radius: var(--br-7xs);
+  background-color: var(--color-whitesmoke-200);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-4xs) var(--padding-base);
+  gap: 0 8px;
+  color: var(--color-gray-300);
+}
+.card-icon,
+.deta-table-icon,
+.market-indices-container {
+  width: 14px;
+  height: 2px;
+  position: relative;
+}
+.card-parent {
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-9xs);
+  box-sizing: border-box;
+  gap: 6px 0;
+}
+.watchlist {
+  flex: 1;
+  position: relative;
+  line-height: 22px;
+}
+.chevron-right-icon1 {
+  height: 18px;
+  width: 18px;
+  position: relative;
+  display: none;
+}
+.list2 {
+  align-self: stretch;
+  border-radius: var(--br-7xs);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-4xs) var(--padding-base);
+  gap: 0 8px;
+}
+.vector-icon {
+  height: 22px;
+  width: 21px;
+  position: relative;
+}
+.vector-icon1 {
+  height: 54.55%;
+  width: 23.64%;
+  position: absolute;
+  margin: 0 !important;
+  top: 22.73%;
+  right: 38.18%;
+  bottom: 22.73%;
+  left: 38.18%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  z-index: 1;
+}
+.transaction-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-12xs-5);
+  position: relative;
+  gap: 0 10px;
+}
+.transaction {
+  flex: 1;
+  position: relative;
+  line-height: 22px;
+}
+.chevron-right-icon2 {
+  height: 18px;
+  width: 18px;
+  position: relative;
+  display: none;
+}
+.list3 {
+  align-self: stretch;
+  border-radius: var(--br-7xs);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-4xs) var(--padding-base);
+  gap: 0 8px;
+}
+.vector-icon2 {
+  height: 18px;
+  width: 18px;
+  position: relative;
+}
+.vector-icon3 {
+  height: 66.82%;
+  width: 27.73%;
+  position: absolute;
+  margin: 0 !important;
+  top: 20%;
+  right: 39.09%;
+  bottom: 13.18%;
+  left: 33.18%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  z-index: 1;
+}
+.layer-25 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-11xs);
+  position: relative;
+  gap: 0 10px;
+}
+.withdrawl {
+  flex: 1;
+  position: relative;
+  line-height: 22px;
+}
+.chevron-right-icon3 {
+  height: 18px;
+  width: 18px;
+  position: relative;
+  display: none;
+}
+.apps-pages,
+.list4 {
+  align-self: stretch;
+  display: flex;
+  justify-content: flex-start;
+}
+.list4 {
+  border-radius: var(--br-7xs);
+  flex-direction: row;
+  align-items: center;
+  padding: var(--padding-4xs) var(--padding-base);
+  gap: 0 8px;
+}
+.apps-pages {
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 var(--padding-sm);
+  gap: 8px 0;
+  text-align: left;
+  font-size: var(--light-basic-typography-paragraph-medium-size);
+  color: var(--color-lightslategray);
+  font-family: var(--light-basic-typography-paragraph-medium);
+}
