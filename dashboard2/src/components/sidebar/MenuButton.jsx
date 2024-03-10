@@ -1,10 +1,10 @@
-export default function MenuButton({ children , image, onSelect }) {
+export default function MenuButton({ children , image, isSelected, onSelect }) {
 
 
 
     return (
         <div 
-            className="list1" 
+            className={isSelected ? "active-menu" : 'inactive-menu'} 
             onClick={onSelect}
         >
             <img className="menu-icon" alt="menu-icon" src={image} />

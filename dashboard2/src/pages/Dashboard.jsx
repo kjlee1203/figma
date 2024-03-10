@@ -1,6 +1,6 @@
 import Logo from "../components/Logo";
 import MainMenu from "../components/sidebar/MainMenu";
-import AppsPages from "../components/sidebar/AppsPages";
+import Todo from "../components/sidebar/Todo";
 
 import "./Dashboard.css";
 

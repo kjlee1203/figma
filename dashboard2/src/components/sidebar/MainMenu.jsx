@@ -1,13 +1,22 @@
 import "./MainMenu.css";
+import MenuButton from "./MenuButton.jsx";
+
+// importing the icons
 import smarthomeIcon from "../../../public/smarthome.svg";
 import watchlistIcon from "../../../public/watchlist-icon.png";
 import transacIcon from "../../../public/transac-icon.png";
 import withdrawlIcon from "../../../public/withdrawl-icon.png";
-import MenuButton from "./MenuButton.jsx";
+
+// to remember the selected menu
+import { useState } from "react";
 
 const MainMenu = () => {
-  const handleMenuClick = () => {
-    alert('Div clicked!');
+
+  const [selectedMenu, setSelectedMenu] = useState();
+
+  const handleMenuClick = (selectedDiv) => {
+    setSelectedMenu(selectedDiv);
+    alert(selectedDiv + ' was clicked');
     // You can add any other actions you want to perform when the div is clicked
   };
 
@@ -17,25 +26,29 @@ const MainMenu = () => {
     <menu className="apps-pages">
       <MenuButton
         image={smarthomeIcon}
-        onSelect={() => handleMenuClick()}>
+        isSelected={selectedMenu === 'dashboard'}
+        onSelect={() => handleMenuClick('dashboard')}>
         Dashboard
       </MenuButton>
 
       <MenuButton
         image={watchlistIcon}
-        onSelect={() => handleMenuClick()}>
+        isSelected={selectedMenu === 'watchlist'}
+        onSelect={() => handleMenuClick('watchlist')}>
         Watchlist
       </MenuButton>
 
       <MenuButton
         image={transacIcon}
-        onSelect={() => handleMenuClick()}>
+        isSelected={selectedMenu === 'transaction'}
+        onSelect={() => handleMenuClick('transaction')}>
         Transaction
       </MenuButton>
 
       <MenuButton
         image={withdrawlIcon}
-        onSelect={() => handleMenuClick()}>
+        isSelected={selectedMenu === 'withdrawl'}
+        onSelect={() => handleMenuClick('withdrawl')}>
         Withdrawl
       </MenuButton>
 

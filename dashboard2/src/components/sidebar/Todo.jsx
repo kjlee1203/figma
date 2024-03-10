@@ -1,6 +1,8 @@
-import "./AppsPages.css";
+import "./Todo.css";
 
-const AppsPages = () => {
+import pfIcon from "../../../public/pf-icon.png";
+
+const Todo = () => {
   return (
     <div className="apps-pages1">
       <div className="list5">
@@ -54,4 +56,4 @@ const AppsPages = () => {
   );
 };
 
-export default AppsPages;
+export default Todo;

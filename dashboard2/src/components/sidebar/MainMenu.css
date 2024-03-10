@@ -41,7 +41,7 @@
   position: relative;
   display: none;
 }
-.list1 {
+.active-menu {
   align-self: stretch;
   border-radius: var(--br-7xs);
   background-color: var(--color-whitesmoke-200);
@@ -52,6 +52,16 @@
   padding: var(--padding-4xs) var(--padding-base);
   gap: 0 8px;
   color: var(--color-gray-300);
+}
+.inactive-menu {
+  align-self: stretch;
+  border-radius: var(--br-7xs);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-4xs) var(--padding-base);
+  gap: 0 8px;
 }
 .card-icon,
 .deta-table-icon,
@@ -81,16 +91,7 @@
   position: relative;
   display: none;
 }
-.list2 {
-  align-self: stretch;
-  border-radius: var(--br-7xs);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  padding: var(--padding-4xs) var(--padding-base);
-  gap: 0 8px;
-}
+
 .vector-icon {
   height: 22px;
   width: 21px;
