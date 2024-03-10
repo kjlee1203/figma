@@ -1,6 +1,6 @@
 import Template5Login from './Template5Login.jsx'
 import Template5Signup from "../../signup-page/src/Template5Signup.jsx"
-import DashboardApp from "../../dashboard/src/DashboardApp.jsx";
+import DashboardApp from "../../dashboard2/src/DashboardApp.jsx";
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
