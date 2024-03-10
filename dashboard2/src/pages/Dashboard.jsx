@@ -1,4 +1,6 @@
-import AppsPages1 from "../components/AppsPages1";
+import Logo from "../components/Logo";
+import MainMenu from "../components/sidebar/MainMenu";
+import AppsPages from "../components/sidebar/AppsPages";
 
 import "./Dashboard.css";
 
@@ -7,16 +9,15 @@ const Dashboard = () => {
     <div className="dashboard">
       <div className="menu">
         <div className="menu1">
-          <h1>Logo</h1>
+          <Logo />
           <div className="section">
             <div className="main-menu">MAIN MENU</div>
           </div>
-          <h1>apps pages 1</h1>
-          <AppsPages1 />
+          <MainMenu />
           <div className="section1">
             <div className="todo">TODO</div>
           </div>
-          <h1>apps pages </h1>
+          <h1>AppsPages</h1>
           <div className="section2">
             <div className="settings">SETTINGS</div>
           </div>

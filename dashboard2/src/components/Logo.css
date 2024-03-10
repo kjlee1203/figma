@@ -1,0 +1,40 @@
+.logo-icon {
+  height: 24px;
+  width: 28px;
+  position: relative;
+  border-radius: var(--br-5xs);
+  min-height: 24px;
+}
+.fba-quant,
+.logo {
+  display: flex;
+  justify-content: center;
+}
+.fba-quant {
+  margin: 0;
+  width: 114px;
+  position: relative;
+  font-size: inherit;
+  line-height: 24px;
+  font-weight: 700;
+  font-family: inherit;
+  align-items: center;
+}
+.logo {
+  align-self: stretch;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: var(--padding-11xl) var(--padding-sm) var(--padding-xl)
+    var(--padding-lg);
+  gap: 0 10px;
+  text-align: center;
+  font-size: var(--font-size-3xl);
+  color: var(--color-gray-300);
+  font-family: var(--light-basic-typography-paragraph-medium);
+}
+@media screen and (max-width: 450px) {
+  .fba-quant {
+    font-size: var(--font-size-lg);
+    line-height: 19px;
+  }
+}
