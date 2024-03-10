@@ -1,9 +1,16 @@
-export default function MenuButton({ children, onSelect, isSelected }) {
+export default function MenuButton({ children , image, onSelect }) {
+
+
+
     return (
-      <li>
-        <button className={isSelected ? "active" : undefined} onClick={onSelect}>
+        <div 
+            className="list1" 
+            onClick={onSelect}
+        >
+            <img className="menu-icon" alt="menu-icon" src={image} />
           {children}
-        </button>
-      </li>
+          
+        </div>
+
     );
   }
