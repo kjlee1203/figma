@@ -1,5 +1,6 @@
 import Sidebar from "../components/sidebar/Sidebar";
 import Titlebar from "../components/title_bar/TitleBar";
+import MyStock from "../components/mystock/MyStock";
 
 
 import "./Dashboard.css";
@@ -14,6 +15,7 @@ const Dashboard = () => {
       <main className="months-labels">
         <section className="card">
           <Titlebar/>
+          <MyStock/>
         </section>
       </main>
 
