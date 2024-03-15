@@ -1,3 +1,51 @@
+.main-menu {
+  position: relative;
+  line-height: 14px;
+}
+
+.todo {
+  position: relative;
+  line-height: 14px;
+}
+
+.settings {
+  position: relative;
+  line-height: 14px;
+}
+
+
+.section {
+  align-self: stretch;
+  border-radius: var(--br-7xs);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-mini) var(--padding-11xl);
+}
+.section1 {
+  align-self: stretch;
+  border-radius: var(--br-7xs);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-11xl) var(--padding-11xl) var(--padding-mini);
+}
+
+.section2 {
+  align-self: stretch;
+  border-radius: var(--br-7xs);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-11xl) var(--padding-11xl) var(--padding-mini);
+}
+
+
+
+
 .menu-icon {
   height: 22px;
   width: 22px;
