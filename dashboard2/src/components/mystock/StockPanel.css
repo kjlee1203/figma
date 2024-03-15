@@ -1,0 +1,95 @@
+.nvidia-1-icon {
+    height: 24px;
+    width: 24px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .nvidia {
+    position: relative;
+    font-weight: 500;
+  }
+  .frame-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0 6px;
+  }
+  .am-pm-indicator,
+  .nvda {
+    position: relative;
+    text-transform: uppercase;
+  }
+  .nvda {
+    white-space: nowrap;
+  }
+  .am-pm-indicator {
+    color: var(--color-yellowgreen);
+  }
+  .d-line-m-line {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: right;
+  }
+  .monthly-budget {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--padding-11xs);
+    gap: var(--gap-xl);
+  }
+  .current-value,
+  .line-frame-line {
+    position: relative;
+    text-transform: capitalize;
+  }
+  .line-frame-line {
+    font-size: var(--font-size-lg);
+    font-weight: 500;
+    color: var(--color-gray-200);
+    white-space: nowrap;
+  }
+  .deta-table-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4px 0;
+  }
+  .frame-header-footer-child {
+    height: 24px;
+    width: 78px;
+    position: relative;
+  }
+  .frame-header-footer {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gap-xl);
+    color: var(--color-gray-100);
+  }
+  .income-expenses {
+    flex: 1;
+    border-radius: var(--br-5xs);
+    background-color: var(--color-paleturquoise);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-base-5) var(--padding-xs);
+    box-sizing: border-box;
+    gap: 16px 0;
+    min-width: 138px;
+    text-align: left;
+    font-size: var(--font-size-xs);
+    color: var(--color-gray-200);
+    font-family: var(--light-basic-typography-paragraph-medium);
+  }
+  

@@ -1,4 +1,4 @@
-//import IncomeExpenses from "./IncomeExpenses";
+import StockPanel from "./StockPanel";
 import "./MyStock.css";
 import {data} from './mockData';
 import chevRight from "../../../public/chevright.png";
@@ -53,11 +53,25 @@ const MyStock = () => {
 
       <h3 className="my-stock">My Stock</h3>
       <nav className="card-container">
-
-
-        <h1>IncomeExpenses</h1>
         
-        
+        <StockPanel
+          nvidia1="/teslamotors1-1.svg"
+          nvidia="Tesla Inc"
+          nVDA="TSLA"
+          amPmIndicator="+17.63"
+          lineFrameLineMFrameY="$177.90"
+          group3="/group-3-2@2x.png"
+          propBackgroundColor="#ffe5a5"
+          propPadding="var(--padding-base) var(--padding-xs)"
+          propPadding1="unset"
+          propWidth="62px"
+          propColor="#2c2c2c"
+          propColor1="#2c2c2c"
+          propColor2="#77b900"
+          propColor3="#838383"
+          propColor4="#2c2c2c"
+        />
+
         <div className="income-expenses1">
           <div className="frame-parent">
             <div className="frame-group">
