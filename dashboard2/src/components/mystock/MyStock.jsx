@@ -4,6 +4,16 @@ import "./MyStock.css";
 const MyStock = () => {
   return (
     <div className="frame-d-m-lines">
+
+      <div>yea
+      <h1 className="text-3xl font-bold underline">
+      Hello world!
+        </h1>
+
+
+      </div>
+
+
       <h3 className="my-stock">My Stock</h3>
       <nav className="card-container">
 
