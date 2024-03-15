@@ -1,26 +1,24 @@
-import "./MainMenu.css";
+import "./Sidebar.css";
 import MenuButton from "./MenuButton.jsx";
 import Logo from "./Logo.jsx";
 
-import Settings from "./Settings";
-
-
-// importing the icons
+// icons for main menu
 import smarthomeIcon from "../../../public/smarthome.svg";
 import watchlistIcon from "../../../public/watchlist-icon.png";
 import transacIcon from "../../../public/transac-icon.png";
 import withdrawlIcon from "../../../public/withdrawl-icon.png";
-// icons
+// icons for todo
 import pfIcon from "../../../public/pf-icon.png";
 import alertsIcon from "../../../public/alerts-icon.png";
 import analyticsIcon from "../../../public/analytics-icon.png";
+// icons for settings
 import manageIcon from "../../../public/manage-icon.png";
 
 
 // to remember the selected menu
 import { useState } from "react";
 
-const MainMenu = () => {
+const Sidebar = () => {
 
   const [selectedMenu, setSelectedMenu] = useState();
 
@@ -69,16 +67,6 @@ const MainMenu = () => {
           onSelect={() => handleMenuClick('withdrawl')}>
           Withdrawl
         </MenuButton>
-
-
-        <MenuButton
-          image={manageIcon}
-          isSelected={selectedMenu === 'manage account'}
-          onSelect={() => handleMenuClick('manage account')}>
-          Manage Account
-        </MenuButton>
-
-
       </menu>
 
       
@@ -86,7 +74,7 @@ const MainMenu = () => {
         <div className="todo">TODO</div>
       </div>
 
-      <menu className="apps-pages1">
+      <menu className="apps-pages">
         <MenuButton
           image={pfIcon}
           isSelected={selectedMenu === 'portfolio'}
@@ -108,17 +96,20 @@ const MainMenu = () => {
           Analytics
         </MenuButton>
       </menu>
-
-
-
-
-      
+     
 
       <div className="section2">
         <div className="settings">SETTINGS</div>
       </div>
-      <Settings />
 
+      <menu className="apps-pages">
+        <MenuButton
+          image={manageIcon}
+          isSelected={selectedMenu === 'manage account'}
+          onSelect={() => handleMenuClick('manage account')}>
+          Manage Account
+        </MenuButton>
+      </menu>
 
     </div>
 
@@ -133,4 +124,4 @@ const MainMenu = () => {
   );
 };
 
-export default  MainMenu;
+export default  Sidebar;

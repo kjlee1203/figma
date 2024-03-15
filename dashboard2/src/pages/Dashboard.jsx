@@ -1,4 +1,4 @@
-import MainMenu from "../components/sidebar/MainMenu";
+import Sidebar from "../components/sidebar/Sidebar";
 
 
 import "./Dashboard.css";
@@ -7,7 +7,7 @@ const Dashboard = () => {
   return (
     <div className="dashboard">
       <div className="menu">
-    <MainMenu />
+        <Sidebar />
       </div>
 
       <main className="months-labels">
