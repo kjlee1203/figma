@@ -1,6 +1,7 @@
 import StockPanel from "./StockPanel";
 import "./MyStock.css";
-import {data} from './mockData';
+//import {data} from './mockData';
+import {stockData} from './stockData';
 import chevRight from "../../../public/chevright.png";
 import chevLeft from "../../../public/chevleft.png";
 
@@ -26,24 +27,41 @@ const MyStock = () => {
       <div>How to Scroll Horizontally in React JS - Styled With Tailwind CSS
         <div className='relative flex items-center'>
             <img 
-              className='opacity-50 cursor-pointer hover:opacity-100'
-              src={chevLeft} onClick={slideLeft} size={40}
+              className='w-5 opacity-50 cursor-pointer hover:opacity-100'
+              src={chevLeft} onClick={slideLeft}
             />
             <div 
               id='slider'
               className='w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide'
             >
-                {data.map((item) => (
-                    <img
+                <div 
                     className='w-[220px] inline-block p-2 cursor-pointer hover:scale-105 ease-in-out duration-300'
-                    src={item.img}
-                    alt='/'
-                    />
+                >
+                    <StockPanel nvidia="Apple"/>
+                </div>
+
+                <div 
+                    className='w-[220px] inline-block p-2 cursor-pointer hover:scale-105 ease-in-out duration-300'
+                >
+                    <StockPanel nvidia="Tesla Inc"/>
+                </div>
+
+
+
+                {stockData.map((item) => (
+                     <img
+                     className='w-[220px] inline-block p-2 cursor-pointer hover:scale-105 ease-in-out duration-300'
+                     src={item.img}
+                     alt='/'
+                     />
+
                 ))}
+                
+
             </div>
             <img 
-              className='opacity-50 cursor-pointer hover:opacity-100'
-              src={chevRight} onClick={slideRight} size={40}
+              className='w-5 opacity-50 cursor-pointer hover:opacity-100'
+              src={chevRight} onClick={slideRight}
             />
         </div>
 
