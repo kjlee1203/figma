@@ -1,14 +1,51 @@
 //import IncomeExpenses from "./IncomeExpenses";
 import "./MyStock.css";
+import {data} from './mockData';
+import chevRight from "../../../public/chevright.png";
+import chevLeft from "../../../public/chevleft.png";
+
+
 
 const MyStock = () => {
+
+
+    // for the horizontal scroll
+    const slideLeft = () => {
+        var slider = document.getElementById('slider');
+        slider.scrollLeft = slider.scrollLeft - 500;
+      };
+    
+    const slideRight = () => {
+        var slider = document.getElementById('slider');
+        slider.scrollLeft = slider.scrollLeft + 500;
+    }; 
+
   return (
     <div className="frame-d-m-lines">
 
-      <div>yea
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-        </h1>
+      <div>How to Scroll Horizontally in React JS - Styled With Tailwind CSS
+        <div className='relative flex items-center'>
+            <img 
+              className='opacity-50 cursor-pointer hover:opacity-100'
+              src={chevLeft} onClick={slideLeft} size={40}
+            />
+            <div 
+              id='slider'
+              className='w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide'
+            >
+                {data.map((item) => (
+                    <img
+                    className='w-[220px] inline-block p-2 cursor-pointer hover:scale-105 ease-in-out duration-300'
+                    src={item.img}
+                    alt='/'
+                    />
+                ))}
+            </div>
+            <img 
+              className='opacity-50 cursor-pointer hover:opacity-100'
+              src={chevRight} onClick={slideRight} size={40}
+            />
+        </div>
 
 
       </div>
