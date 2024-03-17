@@ -1,7 +1,7 @@
 import Sidebar from "../components/sidebar/Sidebar";
 import Titlebar from "../components/title_bar/TitleBar";
 import MyStock from "../components/mystock/MyStock";
-
+import TotalBalanceGraph from "../components/total_balance_graph/TotalBalanceGraph";
 
 import "./Dashboard.css";
 
@@ -16,8 +16,7 @@ const Dashboard = () => {
         <section className="card">
           <Titlebar/>
           <MyStock/>
-       
-          <iframe src="https://www.naver.com" width="600" height="400" frameBorder="0"></iframe>
+          <TotalBalanceGraph />
         </section>
       </main>
 
