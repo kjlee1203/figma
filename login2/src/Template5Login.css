@@ -4,15 +4,24 @@ so i changed their class names to fba_quantt and logo-iconn,
 and made new styles for them
 2024.03.17. 21:50
 */
+/* just returned to the original version
+2024.03.17. 21:56
+*/
 .fba-quantt {
   position: fixed;
-  top: 10px;
-  left: 10px;
+  top: 70px;
+  left: 140px;
+  font-size: inherit;
+  line-height: 24px;
+  font-weight: 700;
+  font-family: inherit;
 }
 .logo-iconn {
   height: 24px;
   width: 28px;
-  position: relative;
+  position: fixed;
+  top: 70px;
+  left: 100px;
   border-radius: 8px;
   min-height: 24px;
 }

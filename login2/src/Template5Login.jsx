@@ -13,8 +13,8 @@ function Template5Login() {
         <img className="background-image" alt="bg.png" src={bgImg} />
 
         <div className="logo">
-          <img className="logo-iconn" loading="lazy" alt="logo.svg" src={logoImg} />
-          <h3 className="fba-quantt">FBA Quant</h3>
+          <img className="logo-icon" loading="lazy" alt="logo.svg" src={logoImg} />
+          <h3 className="fba-quant">FBA Quant</h3>
         </div>
       </section>
 
