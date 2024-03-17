@@ -6,7 +6,7 @@ const EmbeddedHTML = () => {
   useEffect(() => {
     const fetchHtmlContent = async () => {
       try {
-        const response = await fetch('./aaa.html');
+        const response = await fetch('/file.html');
         const html = await response.text();
         setHtmlContent(html);
       } catch (error) {
