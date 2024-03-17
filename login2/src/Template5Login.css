@@ -1,3 +1,22 @@
+/*somethings wrong with logo icon and fba-quant:
+the style doesn't change even if i modify this css
+so i changed their class names to fba_quantt and logo-iconn,
+and made new styles for them
+2024.03.17. 21:50
+*/
+.fba-quantt {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+.logo-iconn {
+  height: 24px;
+  width: 28px;
+  position: relative;
+  border-radius: 8px;
+  min-height: 24px;
+}
+
 
 .background-image {
   width: 100%;
@@ -20,6 +39,10 @@
   border-radius: 8px;
   min-height: 24px;
 }
+
+
+
+
 .fba-quant {
   margin: 0;
   position: relative;
