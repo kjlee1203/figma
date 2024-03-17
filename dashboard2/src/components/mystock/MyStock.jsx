@@ -4,7 +4,8 @@ import "./MyStock.css";
 import {stockData} from './stockData';
 import chevRight from "../../../public/chevright.png";
 import chevLeft from "../../../public/chevleft.png";
-
+import miniGraphExample from "../../../public/minigraphexample.png";
+import teslaLogo from "../../../public/teslamotors1-1.svg";
 
 
 const MyStock = () => {
@@ -31,31 +32,26 @@ const MyStock = () => {
               src={chevLeft} onClick={slideLeft}
             />
             <div 
-              id='slider'
-              className='w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide'
+              id='slider' style={{ width: '800px', overflow: 'auto' }}
+              className='w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth'
             >
-                <div 
-                    className='w-[220px] inline-block p-2 cursor-pointer hover:scale-105 ease-in-out duration-300'
-                >
-                    <StockPanel nvidia="Apple"/>
-                </div>
 
-                <div 
-                    className='w-[220px] inline-block p-2 cursor-pointer hover:scale-105 ease-in-out duration-300'
-                >
-                    <StockPanel nvidia="Tesla Inc"/>
-                </div>
-
-
-
-                {stockData.map((item) => (
-                     <img
+            {stockData.map((item) => (
+              <div 
                      className='w-[220px] inline-block p-2 cursor-pointer hover:scale-105 ease-in-out duration-300'
-                     src={item.img}
-                     alt='/'
-                     />
-
-                ))}
+              >
+                <StockPanel
+                  companyIcon={teslaLogo}
+                  companyName="Tesla Inc"
+                  ticker="TSLA"
+                  priceChange="+17.63"
+                  stockPrice="$177.90"
+                  miniGraph={miniGraphExample}
+                  panelColor="#ffe5a5"
+                  priceChangeColor="#77b900"
+                />
+              </div>))
+            }
                 
 
             </div>
@@ -73,21 +69,14 @@ const MyStock = () => {
       <nav className="card-container">
         
         <StockPanel
-          nvidia1="/teslamotors1-1.svg"
-          nvidia="Tesla Inc"
-          nVDA="TSLA"
-          amPmIndicator="+17.63"
-          lineFrameLineMFrameY="$177.90"
-          group3="/group-3-2@2x.png"
-          propBackgroundColor="#ffe5a5"
-          propPadding="var(--padding-base) var(--padding-xs)"
-          propPadding1="unset"
-          propWidth="62px"
-          propColor="#2c2c2c"
-          propColor1="#2c2c2c"
-          propColor2="#77b900"
-          propColor3="#838383"
-          propColor4="#2c2c2c"
+          companyIcon={teslaLogo}
+          companyName="Tesla Inc"
+          ticker="TSLA"
+          priceChange="+17.63"
+          stockPrice="$177.90"
+          miniGraph={miniGraphExample}
+          panelColor="#ffe5a5"
+          priceChangeColor="#77b900"
         />
 
         <div className="income-expenses1">

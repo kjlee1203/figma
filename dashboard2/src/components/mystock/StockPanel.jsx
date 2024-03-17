@@ -2,28 +2,28 @@ import { useMemo } from "react";
 import "./StockPanel.css";
 
 const StockPanel = ({
-  nvidia1,
-  nvidia,
-  nVDA,
-  amPmIndicator,
-  lineFrameLineMFrameY,
-  group3,
-  propBackgroundColor,
-  propPadding,
-  propPadding1,
-  propWidth,
-  propColor,
-  propColor1,
-  propColor2,
-  propColor3,
-  propColor4,
+  companyIcon,
+  companyName,
+  ticker,
+  priceChange,
+  stockPrice,
+  miniGraph,
+  panelColor,
+  propPadding="var(--padding-base) var(--padding-xs)",
+  propPadding1="unset",
+  propWidth="62px",
+  companyNameColor='#2c2c2c',
+  tickerColor='#2c2c2c',
+  priceChangeColor,
+  currentValueColor='#838383',
+  stockPriceColor="#2c2c2c",
 }) => {
   const incomeExpensesStyle = useMemo(() => {
     return {
-      backgroundColor: propBackgroundColor,
+      backgroundColor: panelColor,
       padding: propPadding,
     };
-  }, [propBackgroundColor, propPadding]);
+  }, [panelColor, propPadding]);
 
   const frameIconStyle = useMemo(() => {
     return {
@@ -32,51 +32,51 @@ const StockPanel = ({
     };
   }, [propPadding1, propWidth]);
 
-  const nvidiaStyle = useMemo(() => {
+  const companyNameStyle = useMemo(() => {
     return {
-      color: propColor,
+      color: companyNameColor,
     };
-  }, [propColor]);
+  }, [companyNameColor]);
 
-  const nVDAStyle = useMemo(() => {
+  const tickerStyle = useMemo(() => {
     return {
-      color: propColor1,
+      color: tickerColor,
     };
-  }, [propColor1]);
+  }, [tickerColor]);
 
-  const amPmIndicatorStyle = useMemo(() => {
+  const priceChangeStyle = useMemo(() => {
     return {
-      color: propColor2,
+      color: priceChangeColor,
     };
-  }, [propColor2]);
+  }, [priceChangeColor]);
 
   const currentValueStyle = useMemo(() => {
     return {
-      color: propColor3,
+      color: currentValueColor,
     };
-  }, [propColor3]);
+  }, [currentValueColor]);
 
-  const lineFrameLineStyle = useMemo(() => {
+  const stockPriceStyle = useMemo(() => {
     return {
-      color: propColor4,
+      color: stockPriceColor,
     };
-  }, [propColor4]);
+  }, [stockPriceColor]);
 
   return (
     <div className="income-expenses" style={incomeExpensesStyle}>
       <div className="monthly-budget">
         <div className="frame-icon" style={frameIconStyle}>
-          <img className="nvidia-1-icon" loading="lazy" alt="" src={nvidia1} />
-          <div className="nvidia" style={nvidiaStyle}>
-            {nvidia}
+          <img className="nvidia-1-icon" loading="lazy" alt="" src={companyIcon} />
+          <div className="nvidia" style={companyNameStyle}>
+            {companyName}
           </div>
         </div>
         <div className="d-line-m-line">
-          <div className="nvda" style={nVDAStyle}>
-            {nVDA}
+          <div className="nvda" style={tickerStyle}>
+            {ticker}
           </div>
-          <div className="am-pm-indicator" style={amPmIndicatorStyle}>
-            {amPmIndicator}
+          <div className="am-pm-indicator" style={priceChangeStyle}>
+            {priceChange}
           </div>
         </div>
       </div>
@@ -85,15 +85,15 @@ const StockPanel = ({
           <div className="current-value" style={currentValueStyle}>
             Current Value
           </div>
-          <div className="line-frame-line" style={lineFrameLineStyle}>
-            {lineFrameLineMFrameY}
+          <div className="line-frame-line" style={stockPriceStyle}>
+            {stockPrice}
           </div>
         </div>
         <img
           className="frame-header-footer-child"
           loading="lazy"
           alt=""
-          src={group3}
+          src={miniGraph}
         />
       </div>
     </div>
