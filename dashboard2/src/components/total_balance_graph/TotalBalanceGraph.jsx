@@ -1,13 +1,7 @@
 import "./TotalBalanceGraph.css";
 import EmbeddedHTML from "./embed";
+import aa from "./aa.png";
 //var perf =require('./aaa.html');
-
-//////////////////////////////////////////////////////////////////
-
-
-/////////////////////////////////////////////////
-
-
 
 
 
@@ -18,7 +12,15 @@ const TotalBalanceGraph = () => {
       <div className="heading-parent">
         <h3 className="heading">Your Total Balance</h3>
         <div className="heading1">$ 1234.56</div>
+        <iframe src="./file.html" width="100%" height="400" frameBorder="0"></iframe>
+        
         <EmbeddedHTML/>
+        <iframe src="https://plotly.com/~chris/1638.embed" width="100%" height="400" frameBorder="0"></iframe>
+        <img src="./aa.png" width='300px'/>
+        <img src={aa} width='300px'/>
+        
+        
+        
         
         <div className="frame-parent1">
           <div className="frame-wrapper">

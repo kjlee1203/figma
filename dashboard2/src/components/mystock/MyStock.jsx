@@ -32,7 +32,7 @@ const MyStock = () => {
               src={chevLeft} onClick={slideLeft}
             />
             <div 
-              id='slider' style={{ width: '800px', overflow: 'auto' }}
+              id='slider' style={{width: '800px',  overflow: 'auto' }}
               className='w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth'
             >
 
