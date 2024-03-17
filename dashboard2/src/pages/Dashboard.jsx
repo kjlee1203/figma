@@ -16,6 +16,8 @@ const Dashboard = () => {
         <section className="card">
           <Titlebar/>
           <MyStock/>
+       
+          <iframe src="https://www.naver.com" width="600" height="400" frameBorder="0"></iframe>
         </section>
       </main>
 

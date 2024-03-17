@@ -11,7 +11,7 @@ const StockPanel = ({
   panelColor,
   propPadding="var(--padding-base) var(--padding-xs)",
   propPadding1="unset",
-  propWidth="62px",
+  propWidth="120px", ///// width of div including company logo and name
   companyNameColor='#2c2c2c',
   tickerColor='#2c2c2c',
   priceChangeColor,
@@ -35,6 +35,7 @@ const StockPanel = ({
   const companyNameStyle = useMemo(() => {
     return {
       color: companyNameColor,
+
     };
   }, [companyNameColor]);
 

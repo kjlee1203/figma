@@ -8,6 +8,11 @@
   .nvidia {
     position: relative;
     font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 300px; /* Adjust this value as needed */
+
   }
   .frame-icon {
     display: flex;
