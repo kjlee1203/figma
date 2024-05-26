@@ -2,6 +2,7 @@ import { useState } from "react";
 import InputnameCopy from "./InputnameCopy";
 import "./StartTrialButton.css";
 import { Link } from 'react-router-dom';
+import api from '../api';
 
 function StartTrialButton() {
   // useState for checkbox. Default value is true.
@@ -21,10 +22,23 @@ function StartTrialButton() {
   // for storing the user input when the button is clicked
   const [submittedData1, setSubmittedData1] = useState('')
   const [submittedData2, setSubmittedData2] = useState('')
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     setSubmittedData1(inputValue1);
     setSubmittedData2(inputValue2);
     alert(' email: '+ inputValue1 + '\n password: ' + inputValue2);
+
+    try {
+      const response = await api.post('/auth/token/', {
+        username : inputValue1,
+        password: inputValue2
+      });
+      console.log('Response from API:', response.data);
+      // Handle the response from the API if needed
+    } catch (error) {
+      console.error('Error sending data to API:', error);
+      // Handle the error if needed
+    }
+
   };
 
 
@@ -78,6 +92,7 @@ function StartTrialButton() {
       <div className="or-use">OR</div>
       <Link className="terms1" to="/signup">No account yet? Register now</Link>
       <Link  to="/dashboard">Dashboard</Link>
+      <Link  to="/test">Test</Link>
     </form>
   )
 }
