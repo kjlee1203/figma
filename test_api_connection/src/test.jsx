@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import api from '../../login2/src/api.js';
+import api_upbit from '../../login2/src/api_upbit.js';
+
 import './test.css';
 
 function DataFetchingComponent() {
@@ -10,13 +12,21 @@ function DataFetchingComponent() {
   const [completed, setCompleted] = useState('');
   const [postError, setPostError] = useState(null);
   const [postResponse, setPostResponse] = useState(null);
+  const [upbitInput, setUpbitInput] = useState('');
+
 
   const [data, setData] = useState(null);
+  const [upbitData, setUpbitData] = useState(null);
   const [error, setError] = useState(null);
+  const [upbitError, setUpbitError] = useState(null);
+
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
   }
+
+
+
   const handleSubmit = async () => {
     setError(null);
     setData(null);
@@ -61,10 +71,26 @@ function DataFetchingComponent() {
   };
 
 
+  const handleUpbitInput = (event) => {
+    setUpbitInput(event.target.value);
+  }
+
+  const handleUpbitSubmit = async () => {
+    setUpbitError(null);
+    setUpbitData(null);
+
+    try {
+      const upbitResponse = await api_upbit.get(`/candles/minutes/1?market=${upbitInput}`);
+      setUpbitData(upbitResponse.data);
+    } catch (err) {
+      setUpbitError(err);
+    } 
+  };
+
 
   return (
     <div>
-      <h1>Enter id</h1>
+      <h1 className="h1-style">Enter id</h1>
       <input 
         type="text" 
         value={inputValue} 
@@ -140,6 +166,25 @@ function DataFetchingComponent() {
         </div>
       )}
 
+
+    <h1 className="h1-style">Enter ticker</h1>
+      <input 
+        type="text" 
+        value={upbitInput} 
+        onChange={handleUpbitInput} 
+        placeholder="KRW-BTC" 
+        className="input-text"
+      />
+      <button className="submit-button" 
+       onClick={handleUpbitSubmit}>Submit</button>
+
+      {upbitError && <div>Error!! {error.message}</div>}
+      {upbitData && (
+        <div>
+          <h1 >Fetched Data</h1>
+          <pre>{JSON.stringify(upbitData, null, 2)}</pre>
+        </div>
+      )}
 
 
 
