@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import api from '../../login2/src/api.js';
 import api_upbit from '../../login2/src/api_upbit.js';
+import api_alpaca from '../../login2/src/api_alpaca.js';
 
 import './test.css';
 
@@ -19,6 +20,11 @@ function DataFetchingComponent() {
   const [upbitData, setUpbitData] = useState(null);
   const [error, setError] = useState(null);
   const [upbitError, setUpbitError] = useState(null);
+
+  const [alpacaInput, setAlpacaInput] = useState('');
+  const [alpacaData, setAlpacaData] = useState(null);
+  const [alpacaError, setAlpacaError] = useState(null);
+
 
 
   const handleInputChange = (event) => {
@@ -44,7 +50,7 @@ function DataFetchingComponent() {
 
 
     try {
-      const postResponse = await api.get(`/todo/${inputValue}`);
+      const postResponse = await api.get(`/data/${inputValue}`);
       setData(postResponse.data);
     } catch (err) {
       setError(err);
@@ -88,14 +94,30 @@ function DataFetchingComponent() {
   };
 
 
+  const handleAlpacaInput = (event) => {
+    setAlpacaInput(event.target.value);
+  }
+
+  const handleAlpacaSubmit = async () => {
+    setAlpacaError(null);
+    setAlpacaData(null);
+
+    try {
+      const alpacaResponse = await api_alpaca.get(`/stocks/trades/latest?symbols=${alpacaInput}&feed=iex`);
+      setAlpacaData(alpacaResponse.data);
+    } catch (err) {
+      setAlpacaError(err);
+    } 
+  };
+
   return (
     <div>
-      <h1 className="h1-style">Enter id</h1>
+      <h1 className="h1-style">Enter ticker</h1>
       <input 
         type="text" 
         value={inputValue} 
         onChange={handleInputChange} 
-        placeholder="Enter the id" 
+        placeholder="NVDA" 
         className="input-text"
       />
       <button className="submit-button" 
@@ -187,6 +209,24 @@ function DataFetchingComponent() {
       )}
 
 
+  <h1 className="h1-style">Enter ticker</h1>
+        <input 
+          type="text" 
+          value={alpacaInput} 
+          onChange={handleAlpacaInput} 
+          placeholder="NVDA" 
+          className="input-text"
+        />
+        <button className="submit-button" 
+        onClick={handleAlpacaSubmit}>Submit</button>
+
+        {alpacaError && <div>Error!! {error.message}</div>}
+        {alpacaData && (
+          <div>
+            <h1 >Fetched Data</h1>
+            <pre>{JSON.stringify(alpacaData, null, 2)}</pre>
+          </div>
+        )}
 
 
 
