@@ -1,0 +1,57 @@
+.container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-around; /* Distribute items evenly with space around them */
+    width: 100%; /* Ensure the container takes full width */
+    padding: 20px; /* Add padding for spacing */
+  }
+  
+  .request-section {
+    flex: 1; /* Each section takes equal space */
+    padding: 20px; /* Add padding inside each section */
+    border: 1px solid #ccc; /* Optional: Add border for visual separation */
+    margin: 0 10px; /* Optional: Add margin between sections */
+  }
+  
+  .form-group {
+    display: flex; /* Use flexbox for form layout */
+    align-items: center; /* Align items vertically */
+    margin-bottom: 10px; /* Add margin between form elements */
+  }
+  
+  .form-group label {
+    margin-right: 10px; /* Add spacing between label and input */
+  }
+  
+  .input-field {
+    flex: 1; /* Input fields take remaining space */
+    padding: 8px; /* Add padding inside inputs */
+    font-size: 14px; /* Adjust font size */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 4px; /* Optional: Add border radius */
+  }
+  
+  .post-button {
+    padding: 8px 16px; /* Padding for button */
+    font-size: 14px; /* Adjust font size */
+    background-color: #009756; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove default border */
+    cursor: pointer; /* Cursor style on hover */
+    border-radius: 4px; /* Optional: Add border radius */
+  }
+
+  .delete-button {
+    padding: 8px 16px; /* Padding for button */
+    font-size: 14px; /* Adjust font size */
+    background-color: #850000; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove default border */
+    cursor: pointer; /* Cursor style on hover */
+    border-radius: 4px; /* Optional: Add border radius */
+  }
+  
+  .status-code {
+    margin-top: 10px; /* Add space above status code */
+    font-size: 14px; /* Adjust font size */
+  }
+  

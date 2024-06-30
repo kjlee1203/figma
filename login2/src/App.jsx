@@ -12,7 +12,7 @@ function App() {
         <Routes>
             <Route path="/" element={<Template5Login />} />
             <Route path="/signup" element={<Template5Signup />} />
-            <Route path="/dashboard" element={<DashboardApp />} />
+            <Route path="/dashboard/*" element={<DashboardApp />} />
             <Route path="/test" element={<DataFetchingComponent />} />
         </Routes>
     </Router>
