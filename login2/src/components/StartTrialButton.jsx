@@ -3,6 +3,7 @@ import InputnameCopy from "./InputnameCopy";
 import "./StartTrialButton.css";
 import { Link } from 'react-router-dom';
 import api from '../api';
+import { useNavigate  } from 'react-router-dom';
 
 function StartTrialButton() {
   // useState for checkbox. Default value is true.
@@ -22,22 +23,53 @@ function StartTrialButton() {
   // for storing the user input when the button is clicked
   const [submittedData1, setSubmittedData1] = useState('')
   const [submittedData2, setSubmittedData2] = useState('')
+  const [error, setError] = useState(null);
+  const navigateTo = useNavigate();
   const handleSubmit = async () => {
     setSubmittedData1(inputValue1);
     setSubmittedData2(inputValue2);
-    alert(' email: '+ inputValue1 + '\n password: ' + inputValue2);
+    event.preventDefault();
+    // alert(' email: '+ inputValue1 + '\n password: ' + inputValue2);
+
+    // try {
+    //   const response = await api.post('/auth/token/', {
+    //     username : inputValue1,
+    //     password: inputValue2
+    //   });
 
     try {
-      const response = await api.post('/auth/token/', {
-        username : inputValue1,
-        password: inputValue2
-      });
-      console.log('Response from API:', response.data);
-      // Handle the response from the API if needed
+      console.log('Submitting data to API:', submittedData1, submittedData2);
+      const response = await fetch('http://localhost:8000/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+        },
+          body: JSON.stringify({
+            username: submittedData1,
+            password: submittedData2
+        }),
+      });    
+      if (!response.ok) {
+        const data = await response.json();
+        throw new Error(data.detail || 'Login failed');
+      } 
+      const data = await response.json();
+      console.log('Login successful:', data);
+      // Handle successful login (e.g., store token in local storage, redirect user)
+
+      // history.push('/dashboard');
+      navigateTo('/dashboard');
     } catch (error) {
-      console.error('Error sending data to API:', error);
-      // Handle the error if needed
+        console.error('Login error:', error);
+        setError(error.message || 'Login failed');
     }
+
+    //   console.log('Response from API:', response.data);
+    //   // Handle the response from the API if needed
+    // } catch (error) {
+    //   console.error('Error sending data to API:', error);
+    //   // Handle the error if needed
+    // }
 
   };
 
